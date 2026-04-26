@@ -86,7 +86,12 @@
       "form.ok": "Mensaje recibido. Le responderemos pronto.",
       "form.err": "No fue posible enviar el formulario. Intente nuevamente.",
       "form.invalid": "Revise los campos requeridos.",
-      "footer.text": "Tecnología al servicio de su crecimiento."
+      "footer.text": "Tecnología al servicio de su crecimiento.",
+      "gallery.kicker": "NUESTRO ENTORNO",
+      "gallery.title": "Cómo trabajamos",
+      "gallery.img1": "Análisis financiero",
+      "gallery.img2": "Trabajo en equipo",
+      "gallery.img3": "Espacio de trabajo moderno"
     },
     en: {
       "meta.title": "Consulting Management System",
@@ -174,7 +179,12 @@
       "form.ok": "Message received. We’ll reply soon.",
       "form.err": "The form could not be sent. Please try again.",
       "form.invalid": "Please check the required fields.",
-      "footer.text": "Technology at the service of your growth."
+      "footer.text": "Technology at the service of your growth.",
+      "gallery.kicker": "OUR ENVIRONMENT",
+      "gallery.title": "How we work",
+      "gallery.img1": "Financial analysis",
+      "gallery.img2": "Team collaboration",
+      "gallery.img3": "Modern workspace"
     }
   };
 
@@ -245,7 +255,7 @@
       status.className = "form-status";
       status.textContent = "";
 
-      if (form.elements.website?.value) return;
+      if (form.elements.botcheck?.value) return;
       if (!form.checkValidity()) {
         status.classList.add("err");
         status.textContent = t()["form.invalid"];
@@ -254,20 +264,54 @@
       }
 
       status.textContent = t()["form.sending"];
+      const submitBtn = form.querySelector("button[type='submit']");
+      if (submitBtn) submitBtn.disabled = true;
+
       try {
         const response = await fetch(form.action, {
           method: "POST",
           body: new FormData(form),
           headers: { Accept: "application/json" }
         });
-        if (!response.ok) throw new Error("request_failed");
-        form.reset();
-        status.classList.add("ok");
-        status.textContent = t()["form.ok"];
+        const data = await response.json();
+        if (data.success) {
+          form.reset();
+          status.classList.add("ok");
+          status.textContent = t()["form.ok"];
+        } else {
+          throw new Error(data.message || "request_failed");
+        }
       } catch {
         status.classList.add("err");
         status.textContent = t()["form.err"];
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
       }
+    });
+  }
+
+  const STORAGE_THEME = "cms.neo.theme";
+
+  function initTheme() {
+    const toggle = document.getElementById("theme-toggle");
+    const icon = document.getElementById("theme-icon");
+    if (!toggle || !icon) return;
+
+    let theme = "light";
+    try { theme = localStorage.getItem(STORAGE_THEME) || "light"; } catch {}
+    if (!["light", "dark"].includes(theme)) theme = "light";
+
+    function applyTheme(t) {
+      document.documentElement.setAttribute("data-theme", t);
+      icon.className = t === "dark" ? "fas fa-sun" : "fas fa-moon";
+      toggle.setAttribute("aria-label", t === "dark" ? "Switch to light mode" : "Switch to dark mode");
+      try { localStorage.setItem(STORAGE_THEME, t); } catch {}
+    }
+
+    applyTheme(theme);
+    toggle.addEventListener("click", () => {
+      const current = document.documentElement.getAttribute("data-theme");
+      applyTheme(current === "dark" ? "light" : "dark");
     });
   }
 
@@ -276,5 +320,6 @@
     initMenu();
     initYear();
     initForm();
+    initTheme();
   });
 })();

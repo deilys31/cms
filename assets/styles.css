@@ -111,16 +111,46 @@ textarea {
   object-fit: contain;
 }
 
+[data-theme="dark"] .hero-brand-logo {
+  filter: drop-shadow(0 0 12px rgba(0,230,255,0.4));
+}
+
+/* Hero brand block */
+.hero-brand {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.hero-brand-logo {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 18px rgba(0,140,200,0.28));
+}
+
+.hero-brand-name {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 900;
+  background: linear-gradient(125deg, var(--text), var(--cyan-2), var(--blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
 .brand-copy {
-  color: var(--text);
   display: inline-flex;
   align-items: center;
   min-height: 40px;
   padding: 0.5rem 0.85rem;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.05);
-  color: #ffffff;
+  border: 1px solid var(--line-strong);
+  background: rgba(0, 140, 200, 0.08);
+  color: var(--text);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -591,17 +621,29 @@ textarea {
   color: var(--text);
 }
 
-.service-matrix,
-.module-grid {
+.service-matrix {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
 }
 
-.service-matrix article,
+.module-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.service-matrix article {
+  padding: 1.35rem;
+  border-radius: 1.4rem;
+}
+
 .module-card {
   padding: 1.35rem;
   border-radius: 1.4rem;
+  flex: 1 1 280px;
+  max-width: 380px;
 }
 
 .item-icon {
@@ -776,6 +818,7 @@ textarea {
   overflow: hidden;
   border: 1px solid var(--line);
   box-shadow: 0 12px 30px -12px rgba(0, 140, 200, 0.15);
+  margin-top: 1.25rem;
 }
 
 .about-img {
@@ -973,6 +1016,14 @@ textarea {
 
   .process-flow li {
     grid-template-columns: 56px 1fr;
+  }
+
+  .hero-brand {
+    gap: 1rem;
+  }
+
+  .hero-brand-logo {
+    height: 70px;
   }
 }
 

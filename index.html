@@ -77,15 +77,10 @@
           </div>
 
           <aside class="signal-panel" aria-label="Highlights">
-            <div class="signal-block">
-              <span class="signal-kicker" data-i18n="hero.signal1k">Core stack</span>
-              <strong data-i18n="hero.signal1t">Finanzas, automatización y control</strong>
-              <p data-i18n="hero.signal1d">Productos integrados para entidades financieras reguladas y no reguladas, 100% web.</p>
-            </div>
-            <div class="signal-block">
-              <span class="signal-kicker" data-i18n="hero.signal2k">Execution layer</span>
-              <strong data-i18n="hero.signal2t">Scrum + trazabilidad completa</strong>
-              <p data-i18n="hero.signal2d">Metodología ágil con validación continua, bitácoras, roles y control transaccional.</p>
+            <div class="hero-photo-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=700&h=520&q=80"
+                alt="Equipo de consultoría financiera" class="hero-photo" loading="eager" />
             </div>
           </aside>
         </div>
@@ -155,8 +150,8 @@
           <p data-i18n="about.p3">La alta competencia del mercado, la mejora constante de los servicios y la automatización de procesos exigen información veraz, precisa y en tiempo real. CMS quiere ser parte de ese crecimiento.</p>
           <div class="about-img-wrap">
             <img
-              src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=600&h=260&q=80"
-              alt="Equipo CMS colaborando" class="about-img" loading="lazy" width="600" height="260" />
+              src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=700&h=300&q=80"
+              alt="Equipo CMS colaborando" class="about-img" loading="lazy" width="700" height="300" />
           </div>
         </div>
         <ul class="about-points">
@@ -167,6 +162,16 @@
         </ul>
       </div>
     </section>
+
+    <!-- Banner image strip — like infosgroup's full-width divider -->
+    <div class="img-banner-strip">
+      <img
+        src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&h=320&q=80"
+        alt="Oficina moderna de tecnología" loading="lazy" width="1400" height="320" />
+      <div class="img-banner-overlay">
+        <p class="img-banner-text" data-i18n="about.title">Su aliado tecnológico en el sector financiero</p>
+      </div>
+    </div>
 
     <section id="services" class="section section-panel">
       <div class="section-headline">
@@ -227,10 +232,46 @@
         <h2><i class="fas fa-diagram-project title-icon" aria-hidden="true"></i><span data-i18n="process.title">Cómo ejecutamos cada proyecto</span></h2>
       </div>
       <ol class="process-flow">
-        <li><strong>01</strong><div><h3><i class="fas fa-magnifying-glass item-icon" aria-hidden="true"></i><span data-i18n="process.s1t">Análisis inicial</span></h3><p data-i18n="process.s1d">Reuniones ordenadas para interpretar y documentar requerimientos.</p></div></li>
-        <li><strong>02</strong><div><h3><i class="fas fa-clipboard-check item-icon" aria-hidden="true"></i><span data-i18n="process.s2t">Validación conjunta</span></h3><p data-i18n="process.s2d">Revisión y aprobación del documento funcional con el usuario.</p></div></li>
-        <li><strong>03</strong><div><h3><i class="fas fa-arrows-rotate item-icon" aria-hidden="true"></i><span data-i18n="process.s3t">Desarrollo iterativo</span></h3><p data-i18n="process.s3d">Ciclos Scrum con reuniones de planificación, seguimiento y retrospectiva.</p></div></li>
-        <li><strong>04</strong><div><h3><i class="fas fa-box item-icon" aria-hidden="true"></i><span data-i18n="process.s4t">Entrega y acompañamiento</span></h3><p data-i18n="process.s4d">Pruebas unitarias e integrales, puesta en producción y soporte continuo.</p></div></li>
+        <li>
+          <strong>01</strong>
+          <div class="process-content">
+            <div class="process-text">
+              <h3><i class="fas fa-magnifying-glass item-icon" aria-hidden="true"></i><span data-i18n="process.s1t">Análisis inicial</span></h3>
+              <p data-i18n="process.s1d">Reuniones ordenadas para interpretar y documentar requerimientos.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=400&h=220&q=80" alt="Reunión de análisis" loading="lazy" class="process-img" />
+          </div>
+        </li>
+        <li>
+          <strong>02</strong>
+          <div class="process-content">
+            <div class="process-text">
+              <h3><i class="fas fa-clipboard-check item-icon" aria-hidden="true"></i><span data-i18n="process.s2t">Validación conjunta</span></h3>
+              <p data-i18n="process.s2d">Revisión y aprobación del documento funcional con el usuario.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=400&h=220&q=80" alt="Validación de documento" loading="lazy" class="process-img" />
+          </div>
+        </li>
+        <li>
+          <strong>03</strong>
+          <div class="process-content">
+            <div class="process-text">
+              <h3><i class="fas fa-arrows-rotate item-icon" aria-hidden="true"></i><span data-i18n="process.s3t">Desarrollo iterativo</span></h3>
+              <p data-i18n="process.s3d">Ciclos Scrum con reuniones de planificación, seguimiento y retrospectiva.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&h=220&q=80" alt="Equipo de desarrollo" loading="lazy" class="process-img" />
+          </div>
+        </li>
+        <li>
+          <strong>04</strong>
+          <div class="process-content">
+            <div class="process-text">
+              <h3><i class="fas fa-box item-icon" aria-hidden="true"></i><span data-i18n="process.s4t">Entrega y acompañamiento</span></h3>
+              <p data-i18n="process.s4d">Pruebas unitarias e integrales, puesta en producción y soporte continuo.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=400&h=220&q=80" alt="Entrega del proyecto" loading="lazy" class="process-img" />
+          </div>
+        </li>
       </ol>
     </section>
 
@@ -243,6 +284,11 @@
 
       <div class="contact-grid">
         <div class="contact-side">
+          <div class="contact-side-img">
+            <img
+              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=500&h=320&q=80"
+              alt="Consultoría tecnológica" loading="lazy" />
+          </div>
           <div class="contact-chip"><i class="fas fa-envelope"></i><span>info@consulting-cms.com</span></div>
           <div class="contact-chip"><i class="fas fa-clock"></i><span data-i18n="contact.hours">Lun – Vie · 8:00 – 18:00</span></div>
           <div class="contact-chip"><i class="fas fa-language"></i><span data-i18n="contact.lang">Español · English</span></div>

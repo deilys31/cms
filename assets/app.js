@@ -257,13 +257,6 @@
 
       if (form.elements.botcheck?.value) return;
 
-      const keyInput = form.elements["access_key"];
-      if (!keyInput || !keyInput.value || keyInput.value.startsWith("__")) {
-        status.classList.add("err");
-        status.textContent = "Form not configured. Contact us at info@consulting-cms.com";
-        return;
-      }
-
       if (!form.checkValidity()) {
         status.classList.add("err");
         status.textContent = t()["form.invalid"];

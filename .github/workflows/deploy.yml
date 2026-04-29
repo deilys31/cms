@@ -25,16 +25,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Inject form API key
-        env:
-          FORM_API_KEY: ${{ secrets.FORM_API_KEY }}
-        run: |
-          if [ -z "${FORM_API_KEY}" ]; then
-            echo "ERROR: FORM_API_KEY secret is not set." >&2
-            exit 1
-          fi
-          sed -i "s/__FORM_API_KEY__/${FORM_API_KEY}/g" index.html
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
 

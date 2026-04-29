@@ -12,6 +12,42 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="assets/styles.css" />
+
+  <!-- Preload LCP hero image -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=700&h=520&q=80" />
+
+  <!-- Alternate language versions -->
+  <link rel="alternate" hreflang="es" href="https://www.consulting-cms.com/" />
+  <link rel="alternate" hreflang="en" href="https://www.consulting-cms.com/?lang=en" />
+  <link rel="alternate" hreflang="x-default" href="https://www.consulting-cms.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.consulting-cms.com/" />
+  <meta property="og:title" content="Consulting Management System" />
+  <meta property="og:description" content="Soluciones financieras y comerciales integradas con automatización, seguridad, aplicaciones y consultoría tecnológica." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&h=630&q=80" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Consulting Management System" />
+  <meta name="twitter:description" content="Soluciones financieras y comerciales integradas con automatización, seguridad, aplicaciones y consultoría tecnológica." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&h=630&q=80" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Consulting Management System",
+    "url": "https://www.consulting-cms.com/",
+    "logo": "https://www.consulting-cms.com/assets/Logo%20Oscuro.png",
+    "email": "info@consulting-cms.com",
+    "description": "Soluciones financieras y comerciales integradas con automatización, seguridad, aplicaciones y consultoría tecnológica.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "availableLanguage": ["Spanish", "English"]
+    }
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="a11y.skip">Saltar al contenido</a>
@@ -195,17 +231,17 @@
       <div class="gallery-strip">
         <figure class="gallery-item">
           <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&h=380&q=80"
-               alt="" loading="lazy" width="600" height="380" />
+               alt="Análisis financiero" loading="lazy" width="600" height="380" />
           <figcaption data-i18n="gallery.img1">Análisis financiero</figcaption>
         </figure>
         <figure class="gallery-item">
           <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&h=380&q=80"
-               alt="" loading="lazy" width="600" height="380" />
+               alt="Trabajo en equipo" loading="lazy" width="600" height="380" />
           <figcaption data-i18n="gallery.img2">Trabajo en equipo</figcaption>
         </figure>
         <figure class="gallery-item">
           <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=600&h=380&q=80"
-               alt="" loading="lazy" width="600" height="380" />
+               alt="Espacio de trabajo moderno" loading="lazy" width="600" height="380" />
           <figcaption data-i18n="gallery.img3">Espacio de trabajo moderno</figcaption>
         </figure>
       </div>
@@ -239,7 +275,7 @@
               <h3><i class="fas fa-magnifying-glass item-icon" aria-hidden="true"></i><span data-i18n="process.s1t">Análisis inicial</span></h3>
               <p data-i18n="process.s1d">Reuniones ordenadas para interpretar y documentar requerimientos.</p>
             </div>
-            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=400&h=220&q=80" alt="Reunión de análisis" loading="lazy" class="process-img" />
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=400&h=220&q=80" alt="Reunión de análisis" loading="lazy" class="process-img" width="400" height="220" />
           </div>
         </li>
         <li>
@@ -249,7 +285,7 @@
               <h3><i class="fas fa-clipboard-check item-icon" aria-hidden="true"></i><span data-i18n="process.s2t">Validación conjunta</span></h3>
               <p data-i18n="process.s2d">Revisión y aprobación del documento funcional con el usuario.</p>
             </div>
-            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=400&h=220&q=80" alt="Validación de documento" loading="lazy" class="process-img" />
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=400&h=220&q=80" alt="Validación de documento" loading="lazy" class="process-img" width="400" height="220" />
           </div>
         </li>
         <li>
@@ -259,7 +295,7 @@
               <h3><i class="fas fa-arrows-rotate item-icon" aria-hidden="true"></i><span data-i18n="process.s3t">Desarrollo iterativo</span></h3>
               <p data-i18n="process.s3d">Ciclos Scrum con reuniones de planificación, seguimiento y retrospectiva.</p>
             </div>
-            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&h=220&q=80" alt="Equipo de desarrollo" loading="lazy" class="process-img" />
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&h=220&q=80" alt="Equipo de desarrollo" loading="lazy" class="process-img" width="400" height="220" />
           </div>
         </li>
         <li>
@@ -269,7 +305,7 @@
               <h3><i class="fas fa-box item-icon" aria-hidden="true"></i><span data-i18n="process.s4t">Entrega y acompañamiento</span></h3>
               <p data-i18n="process.s4d">Pruebas unitarias e integrales, puesta en producción y soporte continuo.</p>
             </div>
-            <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=400&h=220&q=80" alt="Entrega del proyecto" loading="lazy" class="process-img" />
+            <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=400&h=220&q=80" alt="Entrega del proyecto" loading="lazy" class="process-img" width="400" height="220" />
           </div>
         </li>
       </ol>
@@ -296,32 +332,33 @@
         </div>
 
         <form class="contact-form" action="https://api.web3forms.com/submit" method="post" novalidate>
-          <input type="hidden" name="access_key" value="7b136c59-3231-407a-b4d8-e21e291e7b53" />
+          <input type="hidden" name="access_key" value="__FORM_API_KEY__" />
           <input type="hidden" name="subject" value="[CMS] Nuevo contacto desde el sitio web" />
           <input type="hidden" name="from_name" value="CMS Web" />
           <div class="form-row">
-            <label>
+            <label for="form-name">
               <span data-i18n="form.name">Nombre</span>
-              <input type="text" name="name" required minlength="2" autocomplete="name" />
+              <input type="text" id="form-name" name="name" required minlength="2" autocomplete="name" />
             </label>
-            <label>
+            <label for="form-phone">
               <span data-i18n="form.phone">Teléfono</span>
-              <input type="tel" name="phone" autocomplete="tel" />
+              <input type="tel" id="form-phone" name="phone" autocomplete="tel" />
             </label>
           </div>
-          <label>
+          <label for="form-email">
             <span data-i18n="form.email">Correo electrónico</span>
-            <input type="email" name="email" required autocomplete="email" />
+            <input type="email" id="form-email" name="email" required autocomplete="email" />
           </label>
-          <label>
+          <label for="form-message">
             <span data-i18n="form.message">Mensaje</span>
-            <textarea name="message" rows="5" required minlength="10"></textarea>
+            <textarea id="form-message" name="message" rows="5" required minlength="10"></textarea>
           </label>
           <input type="text" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <div class="form-actions">
             <button class="btn-neon" type="submit"><i class="fas fa-paper-plane"></i><span data-i18n="form.submit">Enviar mensaje</span></button>
             <p class="form-status" role="status" aria-live="polite"></p>
           </div>
+          <p class="form-privacy"><small>Al enviar este formulario acepta nuestra <a href="/privacy-policy.html">política de privacidad</a>. Su información es tratada de forma segura y nunca será compartida con terceros. · By submitting you agree to our <a href="/privacy-policy.html">privacy policy</a>.</small></p>
         </form>
       </div>
     </section>

@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://www.consulting-cms.com/sitemap.xml

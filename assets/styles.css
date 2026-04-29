@@ -834,6 +834,8 @@ img { max-width: 100%; }
 .form-status { color: var(--muted); font-size: 0.9rem; min-height: 1.4em; }
 .form-status.ok { color: #18a558; }
 .form-status.err { color: #e03535; }
+.form-privacy { margin-top: 0.75rem; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+.form-privacy a { color: var(--accent); text-decoration: underline; }
 .hp { position: absolute; left: -9999px; }
 
 /* ── Hero photo (replaces signal-panel) ── */

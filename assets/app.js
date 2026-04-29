@@ -76,6 +76,7 @@
       "contact.lead": "Comparta sus necesidades y coordinamos una conversación inicial sin compromiso.",
       "contact.hours": "Lun – Vie · 8:00 – 18:00",
       "contact.lang": "Español · English",
+      "contact.secure": "Contacto seguro y trazable",
       "form.name": "Nombre",
       "form.phone": "Teléfono",
       "form.email": "Correo electrónico",
@@ -168,6 +169,7 @@
       "contact.lead": "Share your needs and we’ll schedule an initial conversation with no obligation.",
       "contact.hours": "Mon – Fri · 8:00 – 18:00",
       "contact.lang": "Spanish · English",
+      "contact.secure": "Secure, traceable contact",
       "form.name": "Name",
       "form.phone": "Phone",
       "form.email": "Email",
@@ -274,13 +276,13 @@
       if (submitBtn) submitBtn.disabled = true;
 
       try {
-        const response = await fetch(form.action, {
+        const formData = new FormData(form);
+        const response = await fetch("https://api.web3forms.com/submit", {
           method: "POST",
-          body: new FormData(form),
-          headers: { Accept: "application/json" }
+          body: formData
         });
         const data = await response.json();
-        if (data.success) {
+        if (response.ok) {
           form.reset();
           status.classList.add("ok");
           status.textContent = t()["form.ok"];
